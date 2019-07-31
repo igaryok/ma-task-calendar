@@ -1,7 +1,19 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "./utils";
 
-body {
-  background: $c-gray;
+.calendar {
+  @extend %font;
+  @extend %calendar-position;
+  @extend %calendar-view;
 }
+
+.calendar div {
+  @extend %cell-view-ext;
+}
+
+@include select-first-day;
+
+@include fill-numbers;
+
+@include hide-days;
+
+@include cell-hover;

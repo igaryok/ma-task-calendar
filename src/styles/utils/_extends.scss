@@ -1,4 +1,28 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%font {
+  font-family: $main-font;
+  font-size: $size-font;
+}
+
+%calendar-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%calendar-view {
+  display: grid;
+  grid-template-columns: repeat(7, $size-cel);
+  grid-template-rows: repeat(6, $size-cel);
+  grid-gap: $size-gap;
+}
+
+%cell-view {
+  background-color: $color-cel;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
