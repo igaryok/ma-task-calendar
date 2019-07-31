@@ -7,7 +7,7 @@
 }
 
 .calendar div {
-  @extend %cell-view-ext;
+  @extend %cell-view;
 }
 
 @include select-first-day;
