@@ -1,13 +1,13 @@
 @import "./utils";
 
 .calendar {
-  @extend %font;
-  @extend %calendar-position;
-  @extend %calendar-view;
+  @include font-calendar;
+  @include calendar-position;
+  @include calendar-view;
 }
 
 .calendar div {
-  @extend %cell-view;
+  @include cell-view;
 }
 
 @include select-first-day;
