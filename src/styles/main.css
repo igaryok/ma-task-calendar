@@ -4,161 +4,185 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: repeat(7, 100px);
   grid-template-rows: repeat(6, 100px);
-  grid-gap: 1px; }
+  grid-gap: 1px;
+}
 
 .calendar div {
   background-color: #eee;
   width: 100%;
   height: 100%;
   outline: 1px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  justify-content: center;
+  align-items: center;
+}
 
 .calendar-mon div:first-of-type {
-  grid-column-start: 1; }
-
+  grid-column-start: 1;
+}
 .calendar-tue div:first-of-type {
-  grid-column-start: 2; }
-
+  grid-column-start: 2;
+}
 .calendar-wed div:first-of-type {
-  grid-column-start: 3; }
-
+  grid-column-start: 3;
+}
 .calendar-thu div:first-of-type {
-  grid-column-start: 4; }
-
+  grid-column-start: 4;
+}
 .calendar-fri div:first-of-type {
-  grid-column-start: 5; }
-
+  grid-column-start: 5;
+}
 .calendar-sat div:first-of-type {
-  grid-column-start: 6; }
-
+  grid-column-start: 6;
+}
 .calendar-sun div:first-of-type {
-  grid-column-start: 7; }
+  grid-column-start: 7;
+}
 
 .calendar div:nth-of-type(1)::before {
-  content: "1"; }
+  content: "1";
+}
 
 .calendar div:nth-of-type(2)::before {
-  content: "2"; }
+  content: "2";
+}
 
 .calendar div:nth-of-type(3)::before {
-  content: "3"; }
+  content: "3";
+}
 
 .calendar div:nth-of-type(4)::before {
-  content: "4"; }
+  content: "4";
+}
 
 .calendar div:nth-of-type(5)::before {
-  content: "5"; }
+  content: "5";
+}
 
 .calendar div:nth-of-type(6)::before {
-  content: "6"; }
+  content: "6";
+}
 
 .calendar div:nth-of-type(7)::before {
-  content: "7"; }
+  content: "7";
+}
 
 .calendar div:nth-of-type(8)::before {
-  content: "8"; }
+  content: "8";
+}
 
 .calendar div:nth-of-type(9)::before {
-  content: "9"; }
+  content: "9";
+}
 
 .calendar div:nth-of-type(10)::before {
-  content: "10"; }
+  content: "10";
+}
 
 .calendar div:nth-of-type(11)::before {
-  content: "11"; }
+  content: "11";
+}
 
 .calendar div:nth-of-type(12)::before {
-  content: "12"; }
+  content: "12";
+}
 
 .calendar div:nth-of-type(13)::before {
-  content: "13"; }
+  content: "13";
+}
 
 .calendar div:nth-of-type(14)::before {
-  content: "14"; }
+  content: "14";
+}
 
 .calendar div:nth-of-type(15)::before {
-  content: "15"; }
+  content: "15";
+}
 
 .calendar div:nth-of-type(16)::before {
-  content: "16"; }
+  content: "16";
+}
 
 .calendar div:nth-of-type(17)::before {
-  content: "17"; }
+  content: "17";
+}
 
 .calendar div:nth-of-type(18)::before {
-  content: "18"; }
+  content: "18";
+}
 
 .calendar div:nth-of-type(19)::before {
-  content: "19"; }
+  content: "19";
+}
 
 .calendar div:nth-of-type(20)::before {
-  content: "20"; }
+  content: "20";
+}
 
 .calendar div:nth-of-type(21)::before {
-  content: "21"; }
+  content: "21";
+}
 
 .calendar div:nth-of-type(22)::before {
-  content: "22"; }
+  content: "22";
+}
 
 .calendar div:nth-of-type(23)::before {
-  content: "23"; }
+  content: "23";
+}
 
 .calendar div:nth-of-type(24)::before {
-  content: "24"; }
+  content: "24";
+}
 
 .calendar div:nth-of-type(25)::before {
-  content: "25"; }
+  content: "25";
+}
 
 .calendar div:nth-of-type(26)::before {
-  content: "26"; }
+  content: "26";
+}
 
 .calendar div:nth-of-type(27)::before {
-  content: "27"; }
+  content: "27";
+}
 
 .calendar div:nth-of-type(28)::before {
-  content: "28"; }
+  content: "28";
+}
 
 .calendar div:nth-of-type(29)::before {
-  content: "29"; }
+  content: "29";
+}
 
 .calendar div:nth-of-type(30)::before {
-  content: "30"; }
+  content: "30";
+}
 
 .calendar div:nth-of-type(31)::before {
-  content: "31"; }
+  content: "31";
+}
 
 .calendar-28 div:nth-of-type(28) ~ div {
-  display: none; }
-
+  display: none;
+}
 .calendar-29 div:nth-of-type(29) ~ div {
-  display: none; }
-
+  display: none;
+}
 .calendar-30 div:nth-of-type(30) ~ div {
-  display: none; }
+  display: none;
+}
 
 .calendar div:hover {
   cursor: pointer;
   background-color: pink;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear; }
-
-/*# sourceMappingURL=main.css.map */
+  transform: translateY(-20px);
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
 
 /*# sourceMappingURL=main.css.map */

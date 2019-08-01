@@ -1,6 +1,67 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
-  &:hover {
-    #{$_property}: $_toValue;
+@mixin cell-hover {
+  .calendar div:hover {
+    cursor: pointer;
+    background-color: $color-cel-hover;
+    transform: translateY(-20px);
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
   }
+}
+
+@mixin select-first-day {
+  .calendar {
+    @for $d from 1 to length($days-of-week)+1 {
+      $day-in-week: nth($days-of-week, $d);
+      &-#{$day-in-week} div:first-of-type {
+        grid-column-start: #{$d};
+      }
+    }
+  }
+}
+
+@mixin fill-numbers {
+  @for $i from 1 through 31 {
+    .calendar div:nth-of-type(#{$i})::before {
+      content: quote(#{$i});
+    }
+  }
+}
+
+@mixin hide-days {
+  .calendar {
+    @for $day from 28 to 31 {
+      &-#{$day} div:nth-of-type(#{$day}) ~ div {
+        display: none;
+      }
+    }
+  }
+}
+
+@mixin font-calendar {
+  font-family: $main-font;
+  font-size: $size-font;
+}
+
+@mixin calendar-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin calendar-view {
+  display: grid;
+  grid-template-columns: repeat(7, $size-cel);
+  grid-template-rows: repeat(6, $size-cel);
+  grid-gap: $size-gap;
+}
+
+@mixin cell-view {
+  background-color: $color-cel;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
